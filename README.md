@@ -1,10 +1,10 @@
 # Spatial Analysis Scripts – Bachelor's Thesis
 
-This repository contains Python scripts developed as part of a bachelor's thesis focused on the spatial analysis of socially disadvantaged areas and elementary schools with a high number of students with special educational needs (SEN) in the Olomouc and Moravian-Silesian regions of the Czech Republic.
+This repository contains Python scripts developed as part of a bachelor's thesis named Geoinformation analysis of social segregation in relation to primary education (Hrabal 2025).
 
 ## Contents
 
-### 1. `create_custom_weights_matrix.py`
+### 1. `SWM.py`
 This script generates a custom spatial weights matrix (`.swm`) for a set of polygon features (e.g., schools). The weights are computed based on a distance-decay function with defined inner and outer thresholds. The matrix can be used for spatial statistics, such as spatial lag computation.
 
 **Key features:**
@@ -12,7 +12,7 @@ This script generates a custom spatial weights matrix (`.swm`) for a set of poly
 - Calculates distance-based weights (stepwise linear decay).
 - Outputs a table-based spatial weights matrix and converts it to `.swm` using ArcPy.
 
-### 2. `calculate_jaccard_index.py`
+### 2. `Jaccard.py`
 This script calculates the Jaccard index for two sets of spatial features (e.g., hot spots of schools and SPO PNZ) across multiple buffer distances. It quantifies the degree of spatial overlap between the two datasets.
 
 **Key features:**
@@ -20,7 +20,7 @@ This script calculates the Jaccard index for two sets of spatial features (e.g.,
 - Calculates area of intersection and union using ArcPy geometry tools.
 - Outputs results (buffer distance, intersection area, union area, Jaccard index) to a `.csv` file.
 
-### 3. `calculate_spatial_lag.py`
+### 3. `SpatialLag.py`
 This script calculates the spatial lag (weighted average of neighboring values) for a given attribute column in a polygon shapefile, using a spatial weights matrix in `.swm` format (created in Script 1).
 
 **Key features:**
